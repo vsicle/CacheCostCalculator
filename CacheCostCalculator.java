@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author Peter Jensen (starting code)
  * @author Daniel Kopta (updated starting code)
- * @author <your name here>
+ * @author Vasil Vassilev
  * @version Fall 2023
  */
 public class CacheCostCalculator
@@ -184,7 +184,6 @@ public class CacheCostCalculator
         // or printing order.  Replace the "fix_me" with a calculation or variable in each case.
 
         System.out.println();
-        // DONE  vvvvvvvvvvvvvvvv
         System.out.println("Number of address bits used as offset bits:        " + b);
         if(simulateFullyAssociative){
             // Should be 0 for fully associative cache
@@ -194,12 +193,10 @@ public class CacheCostCalculator
             System.out.println("Number of address bits used as set index bits:     " + s);
         }
         System.out.println("Number of address bits used as tag bits:           " + t);
-        // DONE ^^^^^^^^^^^^^^^^^^
         System.out.println();
 
         System.out.println("Number of valid bits needed in each cache block:   " + 1);
         System.out.println("Number of tag bits stored in each cache block:     " + t);
-        // convert from bits to bytes
         System.out.println("Number of data bits stored in each cache block:    " + numDataBits);
         System.out.println("Number of LRU bits needed in each cache block:     " + numLRUBits);
         System.out.println("Total number of storage bits needed in each block: " + storageBitsPerBlock);
@@ -213,7 +210,7 @@ public class CacheCostCalculator
         //   Simulate memory requests using the addresses in the given order.  Do not sort
         //   or otherwise alter the order or number of the addresses.
 
-        /* Your work here. */
+        /* STUDENT WORK HERE */
 
         /*
         The set index is the first index into the array, and then you can
@@ -344,7 +341,6 @@ public class CacheCostCalculator
                 // increment hits
                 hits++;
             }
-            //System.out.println("Number: "+ addresses[i] +" Address: "+ Integer.toBinaryString(addresses[i]) + " "+didHit);
         }
 
 
@@ -357,10 +353,7 @@ public class CacheCostCalculator
     }
 }
 
-    // This is a great place for additional helper methods.  Add any you like.
-
-
-
+// Helper Methods
 
 // block class to represent each block in the cache
 class Block
